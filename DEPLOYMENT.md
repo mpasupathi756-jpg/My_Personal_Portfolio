@@ -35,12 +35,12 @@ Whenever you push new code to your GitHub repository, Cloudflare will automatica
    - In the left sidebar, click **Compute (Workers & Pages)** → **Pages** → **Connect to Git**.
 
 3. **Select Your Repository**:
-   - Choose your GitHub repository `pasupathi-portfolio`.
+   - Choose your GitHub repository `My_Personal_Portfolio`.
 
 4. **Build Settings**:
-   - **Framework preset**: `None` or `Vite`
+   - **Framework preset**: `Vite`
    - **Build command**: `npm run build`
-   - **Build output directory**: `.output/public`
+   - **Build output directory**: `dist/client`
    - **Root directory**: `/` (or `pasupathi-portfolio` if in a subfolder)
 
 5. **Environment Variables (Optional for EmailJS)**:
