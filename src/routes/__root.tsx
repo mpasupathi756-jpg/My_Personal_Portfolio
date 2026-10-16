@@ -69,6 +69,9 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   );
 }
 
+const faviconDataUri =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1329'/%3E%3Crect x='2' y='2' width='60' height='60' rx='12' fill='none' stroke='%232dd4bf' stroke-width='3'/%3E%3Ctext x='32' y='43' font-family='monospace, sans-serif' font-size='26' font-weight='900' fill='%232dd4bf' text-anchor='middle'%3E%26lt%3BP/%26gt%3B%3C/text%3E%3C/svg%3E";
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
@@ -88,9 +91,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
-      { rel: "alternate icon", href: "/favicon.ico", type: "image/x-icon" },
-      { rel: "apple-touch-icon", href: "/favicon.svg" },
+      { rel: "icon", href: faviconDataUri, type: "image/svg+xml" },
+      { rel: "shortcut icon", href: faviconDataUri },
+      { rel: "alternate icon", href: "/favicon.ico?v=2", type: "image/x-icon" },
+      { rel: "apple-touch-icon", href: faviconDataUri },
     ],
   }),
   shellComponent: RootShell,
