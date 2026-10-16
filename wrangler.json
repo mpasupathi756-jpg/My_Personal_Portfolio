@@ -1,9 +1,5 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "my-personal-portfolio",
-  "compatibility_date": "2026-10-14",
-  "compatibility_flags": [
-    "nodejs_compat"
-  ],
-  "pages_build_output_dir": "dist/client"
+  "pages_build_output_dir": "dist"
 }

@@ -91,7 +91,7 @@ function Reveal({
   );
 }
 
-function Index() {
+export default function Index() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("");
   const [copied, setCopied] = useState(false);
