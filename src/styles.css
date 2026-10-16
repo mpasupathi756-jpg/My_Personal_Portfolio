@@ -999,38 +999,6 @@ h1, h2, h3, h4 {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 15px var(--theme-glow-1);
 }
 
-/* Theme Switcher Styles */
-.theme-picker {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 9999px;
-  padding: 4px 8px;
-  backdrop-filter: blur(12px);
-}
-
-.theme-dot-btn {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  padding: 0;
-}
-
-.theme-dot-btn:hover {
-  transform: scale(1.2);
-}
-
-.theme-dot-btn[data-active="true"] {
-  border-color: #ffffff;
-  box-shadow: 0 0 8px currentColor;
-  transform: scale(1.15);
-}
-
 /* Responsive Media Queries */
 @media(max-width: 1100px) {
   .availability { display: none; }

@@ -24,7 +24,6 @@ import {
   MapPin,
   Menu,
   Music2,
-  Palette,
   Phone,
   Send,
   Server,
@@ -69,14 +68,6 @@ const socialLinks = [
   { label: "LinkedIn", href: "https://linkedin.com/in/pasupathii", icon: Linkedin },
 ];
 
-const themes = [
-  { id: "teal", name: "Cyber Teal", color: "#2dd4bf" },
-  { id: "emerald", name: "Emerald Matrix", color: "#10b981" },
-  { id: "violet", name: "Violet Nebula", color: "#a855f7" },
-  { id: "amber", name: "Solar Amber", color: "#f59e0b" },
-  { id: "sapphire", name: "Sapphire Frost", color: "#38bdf8" },
-];
-
 function Reveal({
   children,
   className = "",
@@ -101,7 +92,6 @@ function Reveal({
 }
 
 function Index() {
-  const [currentTheme, setCurrentTheme] = useState("teal");
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("");
   const [copied, setCopied] = useState(false);
@@ -109,18 +99,6 @@ function Index() {
   const reduced = useReducedMotion();
   const { scrollYProgress } = useScroll();
   const smoothProgress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("portfolio-theme") || "teal";
-    setCurrentTheme(savedTheme);
-    document.documentElement.setAttribute("data-theme", savedTheme);
-  }, []);
-
-  function handleThemeChange(themeId: string) {
-    setCurrentTheme(themeId);
-    document.documentElement.setAttribute("data-theme", themeId);
-    localStorage.setItem("portfolio-theme", themeId);
-  }
 
   async function copyEmail() {
     try {
@@ -188,24 +166,7 @@ function Index() {
             ))}
           </nav>
 
-          <div className="flex shrink-0 items-center gap-3.5">
-            {/* Interactive Theme Switcher */}
-            <div className="theme-picker" title="Switch Color Theme">
-              <Palette className="h-3.5 w-3.5 text-muted-foreground ml-1" />
-              {themes.map((t) => (
-                <button
-                  key={t.id}
-                  type="button"
-                  onClick={() => handleThemeChange(t.id)}
-                  className="theme-dot-btn"
-                  data-active={currentTheme === t.id}
-                  style={{ backgroundColor: t.color }}
-                  aria-label={`Switch to ${t.name} theme`}
-                  title={t.name}
-                />
-              ))}
-            </div>
-
+          <div className="flex shrink-0 items-center gap-4">
             <span className="availability">
               <i className="status-dot" />
               Open to Opportunities
@@ -236,24 +197,6 @@ function Index() {
             aria-label="Mobile navigation"
             className="flex flex-col gap-3 border-b border-white/10 bg-background/95 px-6 py-6 backdrop-blur-2xl md:hidden"
           >
-            <div className="flex items-center justify-between py-2 border-b border-white/10">
-              <span className="text-sm font-medium text-muted-foreground flex items-center gap-2">
-                <Palette size={16} /> Select Theme:
-              </span>
-              <div className="flex gap-2">
-                {themes.map((t) => (
-                  <button
-                    key={t.id}
-                    type="button"
-                    onClick={() => handleThemeChange(t.id)}
-                    className="theme-dot-btn"
-                    data-active={currentTheme === t.id}
-                    style={{ backgroundColor: t.color }}
-                    aria-label={`Switch to ${t.name} theme`}
-                  />
-                ))}
-              </div>
-            </div>
 
             {sections.map((s) => (
               <a
