@@ -28,6 +28,7 @@ This portfolio showcases production-grade full-stack systems, engineering achiev
 - Interactive cart management and order tracking.
 
 ### 2. MoodWave — Dynamic Music Discovery & Streaming Concept
+- Production deployed on **Vercel**: [mood-wave-gilt.vercel.app](https://mood-wave-gilt.vercel.app/)
 - Algorithmic music recommendation based on mood categories and listening history.
 - Real-time collaborative listening spaces and synchronized playlist queues.
 - Real-time animated audio equalizer and responsive glass UI design.

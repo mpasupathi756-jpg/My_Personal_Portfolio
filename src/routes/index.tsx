@@ -495,17 +495,30 @@ export default function Index() {
 
                     <div className="mt-2 flex items-center justify-between">
                       <h3>MoodWave</h3>
-                      <Button asChild size="icon" className="btn-glass h-9 w-9">
-                        <a
-                          href="https://github.com/mpasupathi756-jpg"
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label="MoodWave GitHub repository"
-                          title="View Source on GitHub"
-                        >
-                          <Github className="h-4 w-4" />
-                        </a>
-                      </Button>
+                      <div className="flex items-center gap-2">
+                        <Button asChild size="icon" className="btn-glass h-9 w-9">
+                          <a
+                            href="https://mood-wave-gilt.vercel.app/"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Visit MoodWave live"
+                            title="Visit Live Application"
+                          >
+                            <ExternalLink className="h-4 w-4" />
+                          </a>
+                        </Button>
+                        <Button asChild size="icon" className="btn-glass h-9 w-9">
+                          <a
+                            href="https://github.com/mpasupathi756-jpg"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="MoodWave GitHub repository"
+                            title="View Source on GitHub"
+                          >
+                            <Github className="h-4 w-4" />
+                          </a>
+                        </Button>
+                      </div>
                     </div>
 
                     <p>
@@ -542,12 +555,20 @@ export default function Index() {
 
                     <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between">
                       <a
-                        href="https://github.com/mpasupathi756-jpg"
+                        href="https://mood-wave-gilt.vercel.app/"
                         target="_blank"
                         rel="noreferrer"
                         className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
                       >
-                        Explore Project Repository <ArrowUpRight size={14} />
+                        Launch Live Application <ArrowUpRight size={14} />
+                      </a>
+                      <a
+                        href="https://github.com/mpasupathi756-jpg"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        Source Code <Github size={14} />
                       </a>
                     </div>
                   </div>
