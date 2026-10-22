@@ -36,6 +36,7 @@ import { Button } from "@/components/ui/button";
 import portraitUrl from "@/assets/portrait.jpeg";
 import resumeUrl from "@/assets/Pasupathi-Resume.pdf";
 import foodcartUrl from "@/assets/foodcart.png";
+import moodwaveUrl from "@/assets/moodwave.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -464,32 +465,26 @@ export default function Index() {
               {/* Project 2: MoodWave */}
               <Reveal delay={0.15}>
                 <article className="project-card h-full">
-                  <div
-                    className="music-art"
-                    aria-label="Illustrated MoodWave music project cover"
+                  <a
+                    href="https://mood-wave-gilt.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Open MoodWave live deployment on Vercel"
                   >
-                    <div className="music-art-top">
-                      <span className="flex items-center gap-2 font-semibold">
-                        <Music2 size={18} className="text-primary" /> MoodWave
-                      </span>
-                      <span className="glass-pill text-xs">Full Stack Concept</span>
+                    <div className="project-image">
+                      <img
+                        src={moodwaveUrl}
+                        alt="MoodWave dynamic music streaming platform preview"
+                        loading="lazy"
+                      />
                     </div>
-                    <div className="music-art-title">
-                      A soundtrack <br />
-                      for every feeling.
-                    </div>
-                    <div className="wave-bars" aria-hidden="true">
-                      {Array.from({ length: 36 }, (_, i) => (
-                        <i key={i} />
-                      ))}
-                    </div>
-                  </div>
+                  </a>
 
                   <div className="project-body">
                     <div className="flex items-center justify-between">
                       <div className="project-meta">Full Stack · Music Discovery</div>
-                      <span className="glass-pill text-xs text-muted-foreground">
-                        Interactive System
+                      <span className="glass-pill text-xs text-primary">
+                        <i className="status-dot" /> Live on Vercel
                       </span>
                     </div>
 
